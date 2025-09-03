@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dark Mode</title></head>     
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: white;
+      color: black;
+      text-align: center;
+      padding: 50px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .mode-selector {
+      margin-top: 30px;
+    }
+
+    select {
+      font-size: 16px;
+      padding: 8px 12px;
+      border-radius: 5px;
+    }
+
+    /* Dark mode when option "dark" is selected */
+    body:has(select option:checked[value="dark"]) {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hello World</h1>
+  <p>You can use the CSS :has pseudo-class to create a functioning
+dark mode option in css only without any javascript needed!</p>
+
+  <div class="mode-selector">
+    <label for="mode">Choose mode:</label>
+    <select id="mode">
+      <option value="light" selected>Light Mode</option>
+      <option value="dark">Dark Mode</option>
+    </select>
+  </div>
+ 
+</body>
+</html>

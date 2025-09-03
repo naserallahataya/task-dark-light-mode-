@@ -1,0 +1,175 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+       body {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);  
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;  
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.4);  
+    border-radius: 12px;
+}
+.title {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+      .team-grid {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team-card {
+    background: linear-gradient(145deg, #3f2b96, #a8c0ff); /* تدريج ثاني للبطاقات */
+    border-radius: 15px;
+    padding: 20px;
+    width: 260px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+        .team-card::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 120px;
+            background: rgba(255, 255, 255, 0);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            opacity: 0;
+        }
+
+        .team-card:hover::before {
+            background: rgba(255, 255, 255, 0.2);
+            opacity: 1;
+            transform: translateX(-50%) scale(1);
+        }
+
+        .team-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    margin-bottom: 15px;
+}
+
+        .team-card:hover .profile-img {
+            transform: scale(1.1);
+            border-color: white;
+        }
+
+        .member-name {
+    font-size: 1.5rem;
+    margin: 10px 0 5px;
+    text-transform: capitalize;
+}
+
+      .member-role {
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 9px;
+            opacity: 0;
+            transform: translateY(12px);
+            transition: all 0.3s ease;
+            margin-top: 12px;
+        }
+
+        .team-card:hover .social-icons {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .social-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            font-size: 0.72rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background: rgba(255,255,255,0.3);
+            border-color: white;
+            transform: translateY(-3px);
+        }
+
+        .team-card:hover .member-name {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .team-card:hover .member-role {
+            color: white;
+        }
+
+        /* تأثير خاص للبطاقة الوسطى */
+        .team-card:nth-child(2) {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .team-card:nth-child(2)::before {
+            background: rgba(255, 255, 255, 0);
+            opacity: 0;
+        }
+
+        .team-card:nth-child(2):hover::before {
+            background: rgba(255, 255, 255, 0.25);
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .team-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .title {
+                font-size: 2rem;
+                margin-bottom: 40px;
+            }
+        }
