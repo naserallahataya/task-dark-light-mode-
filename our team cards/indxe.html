@@ -95,3 +95,87 @@
     </div>
 </body>
 </html>
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blurred Card</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #c480bd;
+      
+      position: relative;
+    
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: purple;
+      opacity: 0.3;
+      filter: blur(10px);
+    }
+
+    .circle1 {
+      width: 200px;
+      height: 200px;
+      top: 10%;
+      left: 20%;
+    }
+
+    .circle2 {
+      width: 150px;
+      height: 150px;
+      top: 60%;
+      left: 70%;
+    }
+
+    .circle3 {
+      width: 180px;
+      height: 180px;
+      top: 30%;
+      left: 50%;
+    }
+
+    .circle4 {
+      width: 120px;
+      height: 120px;
+      top: 75%;
+      left: 15%;
+    }
+
+    .card {
+      width: 300px;
+      padding: 200px;
+      border-radius: 30px;
+      background: rgba(87, 22, 22, 0.1);
+      
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+      color: #fff;
+      text-align: center;
+       
+          backdrop-filter: blur(80px);
+          -webkit-backdrop-filter: blur(80px);
+    }
+  </style>
+</head>
+<body>
+  <div class="circle circle1"></div>
+  <div class="circle circle2"></div>
+  <div class="circle circle3"></div>
+  <div class="circle circle4"></div>
+
+  <div class="card">
+    <h2>Blurred Card</h2>
+    <p>Need to add text.</p>
+  </div>
+</body>
+</html>
